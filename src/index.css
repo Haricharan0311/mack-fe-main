@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* QuantiMind Dark Theme - Clinical Dashboard */
+    --background: 220 20% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 19% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 19% 20%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 43 96% 56%;
+    --primary-foreground: 217 19% 20%;
+
+    --secondary: 215 20% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 20% 16%;
+    --muted-foreground: 217 10% 64%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 217 19% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --warning: 25 95% 53%;
+    --warning-foreground: 217 19% 20%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 43 96% 56%;
+
+    --radius: 0.75rem;
+
+    /* Risk level colors */
+    --risk-high: 0 84% 60%;
+    --risk-medium: 25 95% 53%;
+    --risk-low: 142 76% 36%;
+
+    /* Chart colors */
+    --chart-1: 43 96% 56%;
+    --chart-2: 195 100% 50%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 280 100% 70%;
+    --chart-5: 25 95% 53%;
+
+    /* Gradient effects */
+    --gradient-primary: linear-gradient(135deg, hsl(43 96% 56%), hsl(25 95% 53%));
+    --shadow-glow: 0 0 20px hsl(43 96% 56% / 0.1);
+    --shadow-card: 0 4px 6px -1px hsl(220 20% 4% / 0.1), 0 2px 4px -1px hsl(220 20% 4% / 0.06);
+
+    /* Animations */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
